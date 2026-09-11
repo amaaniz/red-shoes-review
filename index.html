@@ -244,7 +244,21 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.2rem 7
   .contact-section, footer { flex-direction:column; align-items:flex-start; }
   .contact-section h2 { font-size:4.2rem; }
 }
+.submit-buttons {
+  position: relative;
+  z-index: 10;
+}
 
+.submit-buttons a {
+  position: relative;
+  z-index: 11;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.submit-stamp {
+  pointer-events: none;
+}
   </style>
 </head>
 <body>
