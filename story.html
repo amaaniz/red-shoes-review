@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Story | Red Shoes Review</title>
+
+  <style>
+    :root {
+      --red: #8f1827;
+      --deep-red: #68121d;
+      --cream: #f3e4c8;
+      --light-cream: #faefd9;
+      --pink: #d7a0a0;
+      --brown: #40251f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: var(--deep-red);
+      color: var(--light-cream);
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--pink);
+    }
+
+    .logo {
+      color: var(--light-cream);
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .back {
+      color: var(--light-cream);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: 2px;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+
+    .story-hero {
+      background: var(--red);
+      color: var(--light-cream);
+      padding: 90px 8% 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: .75rem;
+      margin-bottom: 10px;
+    }
+
+    .story-hero h1 {
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      line-height: .95;
+      margin: 10px 0 25px;
+      font-style: italic;
+    }
+
+    .story-hero p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    /* INTRO */
+
+    .intro {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 8% 50px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: var(--red);
+      font-size: 2.4rem;
+      margin-top: 0;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 8% 100px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid var(--red);
+      padding: 0 0 60px 40px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "✦";
+      position: absolute;
+      left: -14px;
+      top: -6px;
+      background: var(--cream);
+      color: var(--red);
+      font-size: 1.3rem;
+      padding: 0 3px;
+    }
+
+    .year {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .8rem;
+      font-weight: bold;
+      margin: 0 0 5px;
+    }
+
+    .timeline h3 {
+      font-size: 2rem;
+      margin: 0 0 12px;
+      color: var(--deep-red);
+    }
+
+    .timeline p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    /* QUOTE */
+
+    .belief {
+      background: var(--deep-red);
+      color: var(--light-cream);
+      text-align: center;
+      padding: 80px 10%;
+    }
+
+    .belief p {
+      max-width: 800px;
+      margin: auto;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-style: italic;
+      line-height: 1.25;
+    }
+
+    .belief span {
+      display: block;
+      margin-top: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .7rem;
+      font-style: normal;
+    }
+
+    /* BOTTOM */
+
+    .return {
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .return a {
+      display: inline-block;
+      background: var(--red);
+      color: var(--light-cream);
+      text-decoration: none;
+      padding: 14px 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .75rem;
+    }
+
+    .return a:hover {
+      background: var(--deep-red);
+    }
+
+    footer {
+      background: var(--deep-red);
+      color: var(--light-cream);
+      text-align: center;
+      padding: 25px;
+      font-size: .8rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      .story-hero {
+        padding: 70px 7%;
+      }
+
+      .timeline-item {
+        padding-left: 28px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="logo" href="index.html">RED SHOES REVIEW</a>
+    <a class="back" href="index.html">← Back to RSR</a>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="story-hero">
+
+    <p class="eyebrow">EST. 1970 · UNIVERSITY OF ILLINOIS CHICAGO</p>
+
+    <h1>Our Story</h1>
+
+    <p>
+      More than five decades of creativity, community, and
+      student expression at UIC.
+    </p>
+
+  </header>
+
+
+  <!-- INTRO -->
+  <section class="intro">
+
+    <p class="eyebrow">THEN & NOW</p>
+
+    <h2>A Magazine Built by Students</h2>
+
+    <p>
+      Red Shoes Review was established in 1970 and has been part
+      of UIC's creative community for more than five decades.
+      Throughout its history, the magazine has evolved while
+      continuing to provide students with a space to create,
+      collaborate, and share their work.
+    </p>
+
+  </section>
+
+
+  <!-- TIMELINE -->
+  <section class="timeline">
+
+    <div class="timeline-item">
+      <p class="year">1970</p>
+
+      <h3>Red Shoes Review Begins</h3>
+
+      <p>
+        Red Shoes Review was established in 1970, beginning a
+        student-led tradition of celebrating creative expression
+        at the University of Illinois Chicago.
+      </p>
+    </div>
+
+
+    <div class="timeline-item">
+      <p class="year">OUR EARLY YEARS</p>
+
+      <h3>The Honors College</h3>
+
+      <p>
+        RSR was originally associated with UIC's Honors College,
+        where the magazine developed as a space for students to
+        share their writing, art, and creative perspectives.
+      </p>
+    </div>
+
+
+    <div class="timeline-item">
+      <p class="year">A NEW CHAPTER</p>
+
+      <h3>Becoming Independent</h3>
+
+      <p>
+        Red Shoes Review later became an independent student
+        organization, opening a new chapter in the magazine's
+        history and expanding the community surrounding it.
+      </p>
+    </div>
+
+
+    <div class="timeline-item">
+      <p class="year">RSR TODAY</p>
+
+      <h3>Creativity Without Boundaries</h3>
+
+      <p>
+        Today, Red Shoes Review is built around the idea that
+        creativity is not limited to one college, major, or
+        discipline. Students across UIC can take part in the
+        magazine and contribute to the creative community that
+        continues to shape RSR.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- BELIEF -->
+  <section class="belief">
+
+    <p>
+      “Creativity belongs to everyone.”
+    </p>
+
+    <span>The spirit of Red Shoes Review</span>
+
+  </section>
+
+
+  <!-- RETURN -->
+  <section class="return">
+
+    <a href="index.html">
+      ← Return to Red Shoes Review
+    </a>
+
+  </section>
+
+
+  <footer>
+    RED SHOES REVIEW · EST. 1970 · UIC
+  </footer>
+
+</body>
+</html>
