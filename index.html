@@ -134,7 +134,22 @@ a { color: inherit; }
 .flower-two { left: -2%; bottom: -2%; font-size: 3.7rem; transform: rotate(-19deg); }
 .stamp { position: absolute; right: 12%; top: 29%; width: 118px; height: 118px; border: 3px solid var(--red); border-radius: 50%; display:grid; place-items:center; text-align:center; color: var(--red); font-family: "Cormorant Garamond", serif; font-weight:700; line-height: .9; transform: rotate(-12deg); background: rgba(248,238,220,.6); }
 .scallop { position:absolute; left:0; right:0; bottom:-1px; height:26px; background: radial-gradient(circle at 13px -2px, transparent 13px, var(--red-dark) 14px) 0 0/26px 26px repeat-x; opacity:.18; }
+.logo-card {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  left: 1%;
+  top: 7%;
+  transform: rotate(-6deg);
+  filter: drop-shadow(0 22px 25px rgba(77,20,27,.18));
+}
 
+.logo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .section { padding: 6.5rem 7vw; }
 .section-label { color: var(--red); font-size: .68rem; font-weight:700; letter-spacing:.18em; margin-bottom: 2rem; }
 .intro-section { background: var(--cream-light); }
@@ -232,6 +247,10 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.2rem 7
   .hero h1 { font-size:clamp(4.4rem,21vw,7rem); }
   .hero-intro { font-size:1.25rem; }
   .hero-art { min-height:380px; }
+  .logo-card {
+  width: 250px;
+  height: 250px;
+}
   .card-a { width:220px; height:300px; }
   .big-r { font-size:10rem; }
   .card-b { width:205px; height:245px; padding:1.4rem; }
@@ -289,12 +308,9 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.2rem 7
         </div>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="paper-card card-a">
-          <span class="tiny-type">EST. AT UIC</span>
-          <div class="big-r">R</div>
-          <span class="scribble">stories live here</span>
-        </div>
+      <div class="logo-card">
+  <img src="rsr-logo.png" alt="Red Shoes Review logo">
+</div>
         <div class="paper-card card-b">
           <div class="shoe-mark">♥</div>
           <p>RED<br>SHOES<br>REVIEW</p>
