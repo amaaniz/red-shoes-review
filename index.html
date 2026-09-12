@@ -213,15 +213,99 @@ a { color: inherit; }
 .event-ticket p { font-size:.72rem; font-weight:700; letter-spacing:.14em; }
 .event-ticket span { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:1.4rem; }
 
-.media-section { background:#ecd8bf; border-top:1px solid var(--line); }
-.media-heading { display:grid; grid-template-columns:1fr .45fr; gap:5rem; align-items:end; margin-bottom:3rem; }
-.media-heading > p { margin:0; font-family:"Cormorant Garamond",serif; font-size:1.2rem; }
-.media-grid { display:grid; grid-template-columns:1.2fr .8fr .9fr 1.1fr; gap:1rem; align-items:end; }
-.media-tile { display:grid; place-items:center; min-height:270px; border:8px solid var(--cream-light); box-shadow:0 10px 30px rgba(81,40,31,.12); color:var(--cream-light); font-family:"Cormorant Garamond",serif; font-size:2.1rem; letter-spacing:.08em; }
-.media-tile.one { background:var(--red); transform:rotate(-2deg); }
-.media-tile.two { background:var(--rose); min-height:330px; transform:rotate(1deg); }
-.media-tile.three { background:#9d5a5b; min-height:240px; transform:rotate(-1deg); }
-.media-tile.four { background:var(--red-dark); min-height:300px; transform:rotate(1.4deg); }
+.contact-directory {
+  background: #ecd8bf;
+  border-top: 1px solid var(--line);
+}
+
+.contact-directory-head {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.contact-directory-head h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.4rem, 6vw, 6.5rem);
+  line-height: .88;
+  font-weight: 600;
+  letter-spacing: -.04em;
+  color: var(--brown);
+}
+
+.contact-directory-head h2 em {
+  color: var(--red);
+}
+
+.contact-directory-head > p:last-child {
+  max-width: 620px;
+  margin-top: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.contact-card {
+  min-height: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(90,46,37,.18);
+  box-shadow: 10px 12px 0 rgba(91,38,35,.08);
+}
+
+.contact-card-red {
+  background: var(--red);
+  color: var(--cream-light);
+  transform: rotate(-1deg);
+}
+
+.contact-card-pink {
+  background: var(--pink);
+  color: var(--red-dark);
+  transform: translateY(-10px) rotate(1deg);
+}
+
+.contact-card-cream {
+  background: var(--cream-light);
+  color: var(--red-dark);
+  transform: rotate(-.7deg);
+}
+
+.contact-role {
+  margin: 0 0 2rem;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.contact-card h3 {
+  margin: 0 0 .8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  line-height: .95;
+}
+
+.contact-description {
+  margin: 0 0 2rem;
+  font-size: .9rem;
+}
+
+.contact-card a {
+  margin-top: auto;
+  color: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  align-self: flex-start;
+}
 
 .contact-section { padding:5rem 7vw; display:flex; justify-content:space-between; gap:4rem; align-items:end; background:var(--red); color:var(--cream-light); }
 .contact-section h2 { margin:0; font-family:"Italianno",cursive; font-size:5.3rem; font-weight:400; line-height:.8; }
@@ -237,6 +321,16 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.2rem 7
   .hero { grid-template-columns:1fr; padding-top:5rem; gap:3rem; }
   .hero-art { min-height:430px; max-width:600px; width:100%; }
   .feature-grid, .issue-shelf { grid-template-columns:1fr; }
+  .contact-card-grid {
+  grid-template-columns: 1fr;
+}
+
+.contact-card,
+.contact-card-red,
+.contact-card-pink,
+.contact-card-cream {
+  transform: none;
+}
   .feature-card, .tilt-left, .tilt-right { transform:none; }
   .issue-card { min-height:350px; transform:none; }
   .issue-pink { transform:none; }
@@ -314,7 +408,6 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.2rem 7
       <a href="#issues">Past Issues</a>
       <a href="#submissions">Submissions</a>
       <a href="#events">Events</a>
-      <a href="#media">Media</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -489,36 +582,53 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.2rem 7
       </div>
     </section>
 
-    <section id="media" class="section media-section">
-      <div class="section-label">03 / MEDIA</div>
-      <div class="media-heading">
-        <div>
-          <p class="eyebrow">ON THE PAGE + OFF</p>
-          <h2>Media & <em>moments</em></h2>
-        </div>
-        <p>Drop event photos, contributor art, behind-the-scenes shots, and Instagram features into this gallery later.</p>
-      </div>
-      <div class="media-grid">
-        <div class="media-tile one">PHOTO</div>
-        <div class="media-tile two">ART</div>
-        <div class="media-tile three">EVENT</div>
-        <div class="media-tile four">RSR</div>
-      </div>
-    </section>
+    <section id="contact" class="section contact-directory">
 
-    <section id="contact" class="contact-section">
-      <div>
-        <p class="eyebrow light">KEEP IN TOUCH</p>
-        <h2>Red Shoes Review</h2>
-        <p>University of Illinois Chicago</p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:UIC.redshoes@gmail.com">Email</a>
-        <a href="https://www.instagram.com/redshoesreview/">Instagram</a>
-        <a href="#submissions">Submissions</a>
-      </div>
-    </section>
-  </main>
+  <div class="section-label">03 / CONTACT</div>
+
+  <div class="contact-directory-head">
+    <p class="eyebrow">GET IN TOUCH</p>
+    <h2>Reach out to <em>Red Shoes Review.</em></h2>
+    <p>
+      Questions about Red Shoes Review, submissions, collaborations,
+      or getting involved? We'd love to hear from you.
+    </p>
+  </div>
+
+  <div class="contact-card-grid">
+
+    <article class="contact-card contact-card-red">
+      <p class="contact-role">GENERAL INQUIRIES</p>
+      <h3>Red Shoes Review</h3>
+      <p class="contact-description">For general questions about the magazine.</p>
+      <a href="mailto:UIC.redshoes@gmail.com">
+        UIC.redshoes@gmail.com →
+      </a>
+    </article>
+
+    <article class="contact-card contact-card-pink">
+      <p class="contact-role">PRESIDENT / EDITOR-IN-CHIEF</p>
+      <h3>Amaani Ziauddin</h3>
+      <p class="contact-description">For organization, leadership, and collaboration inquiries.</p>
+      <a href="mailto:aziau@uic.edu">
+        aziau@uic.edu →
+      </a>
+    </article>
+
+    <article class="contact-card contact-card-cream">
+      <p class="contact-role">FACULTY ADVISOR</p>
+      <h3>Dr. Abby Kindelsperger</h3>
+      <p class="contact-description">Faculty advisor for Red Shoes Review.</p>
+      <a href="mailto:akinde4@uic.edu">
+        akinde4@uic.edu →
+      </a>
+    </article>
+
+  </div>
+
+</section>
+
+    
 
   <footer>
     <span>© 2026 RED SHOES REVIEW</span>
